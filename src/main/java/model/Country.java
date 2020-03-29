@@ -1,18 +1,10 @@
 package model;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import javax.persistence.*;
-
 @Entity
 @Data
-
 public class Country {
-
-    public Country() {
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CO_ID")
@@ -21,6 +13,4 @@ public class Country {
     private String name;
     @Column(name = "CO_ALIAS")
     private String alias;
-
-
 }

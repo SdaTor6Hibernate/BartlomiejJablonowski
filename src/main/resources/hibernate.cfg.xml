@@ -18,6 +18,8 @@
         <mapping class="model.Address"/>
         <mapping class="model.Order"/>
         <mapping class="model.User"/>
+        <mapping class="model.Category"/>
+        <mapping class="model.Product"/>
 
 
     </session-factory>

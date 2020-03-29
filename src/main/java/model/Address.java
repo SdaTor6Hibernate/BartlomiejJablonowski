@@ -1,15 +1,9 @@
 package model;
-
-
 import lombok.Data;
-
 import javax.persistence.*;
-
 @Entity
 @Data
-@Table(name = "`order")
 public class Address {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ADD_ID")
@@ -19,7 +13,7 @@ public class Address {
     @Column(name = "ADD_BUILDING_NO")
     private String buildingNo;
     @Column(name = "ADD_APARTAMENT_NO")
-    private String apartamentNo;
+    private String appartamentNo;
     @Column(name = "ADD_CITY")
     private String city;
     @Column(name = "ADD_POSTAL_CODE")
