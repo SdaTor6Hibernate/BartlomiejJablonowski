@@ -15,6 +15,9 @@
         <property name="hbm2dll.auto">validate</property>
 
         <mapping class="model.Country"/>
+        <mapping class="model.Address"/>
+        <mapping class="model.Order"/>
+        <mapping class="model.User"/>
 
 
     </session-factory>
