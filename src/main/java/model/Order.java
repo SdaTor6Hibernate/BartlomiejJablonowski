@@ -17,7 +17,7 @@ public class Order {
     private String ordDate;
     @Column(name = "ORD_PRICE")
     private String ordPrice;
-    //@ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USR_ID", referencedColumnName = "ORD_USR_ID")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ORD_USR_ID", referencedColumnName = "USR_ID")
     private User user;
 }

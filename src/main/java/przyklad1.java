@@ -18,7 +18,7 @@ public class przyklad1 {
 //        Order order = session.find(Order.class, 1);
 //        session.close();
 
-        User user = session.find(User.class, 3);
+        User user = session.find(User.class, 1);
         session.close();
 
         System.out.println(user.toString());
