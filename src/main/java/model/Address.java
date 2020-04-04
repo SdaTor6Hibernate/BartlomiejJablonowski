@@ -1,13 +1,19 @@
 package model;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import javax.persistence.*;
+
 @Entity
 @Data
-public class Address {
+@EqualsAndHashCode(exclude = "country")
+@ToString(exclude = "country")
+public class Address implements ModelClass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ADD_ID")
-    private int addId;
+    private int id;
     @Column(name = "ADD_STREET")
     private String street;
     @Column(name = "ADD_BUILDING_NO")
@@ -18,7 +24,8 @@ public class Address {
     private String city;
     @Column(name = "ADD_POSTAL_CODE")
     private String postalCode;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ADD_CO_ID", referencedColumnName = "CO_ID")
     private Country country;
+
 }

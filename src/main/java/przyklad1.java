@@ -5,7 +5,8 @@ public class przyklad1 {
     public static void main(String[] args) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Order order = session.find(Order.class, 1);
-        session.close();
         System.out.println(order.toString());
+        session.close();
+
     }
 }
